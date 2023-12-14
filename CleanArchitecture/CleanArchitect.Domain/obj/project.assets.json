@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitect.Domain\\CleanArchitect.Domain.csproj",
-      "projectName": "CleanArchitect.Domain",
-      "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitect.Domain\\CleanArchitect.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitect.Domain\\CleanArchitecture.Domain.csproj",
+      "projectName": "CleanArchitecture.Domain",
+      "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitect.Domain\\CleanArchitecture.Domain.csproj",
       "packagesPath": "C:\\Users\\02204\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitect.Domain\\obj\\",
       "projectStyle": "PackageReference",
