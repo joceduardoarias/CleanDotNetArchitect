@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7BlYFR1hyVHvwfqqKzbuxxWvfPU86gn6xheWa4lBrp41lTzx9iZisfYyBIibQhRk6LVfjW+SILItLpQGXzQo9A==",
+  "dgSpecHash": "Y361yZPLuYQj+86fJLxyL4rFFMBgv6yXh2S81VhFKwJGcGtBWSCPYXopmE8GEmzVdEB+19J6x03gqqeCm4e2Hg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitectureConsoleApp\\CleanArchitectureConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitectureConsoleApp\\CleanArchitecture.ConsoleApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

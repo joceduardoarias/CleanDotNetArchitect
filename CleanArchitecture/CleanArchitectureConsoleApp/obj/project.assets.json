@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitectureConsoleApp\\CleanArchitectureConsoleApp.csproj",
-      "projectName": "CleanArchitectureConsoleApp",
-      "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitectureConsoleApp\\CleanArchitectureConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitectureConsoleApp\\CleanArchitecture.ConsoleApp.csproj",
+      "projectName": "CleanArchitecture.ConsoleApp",
+      "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitectureConsoleApp\\CleanArchitecture.ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\02204\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitectureConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
