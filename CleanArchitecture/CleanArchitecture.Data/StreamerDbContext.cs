@@ -6,15 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Data
+namespace CleanArchitecture.Data;
+
+public class StreamerDbContext : DbContext
 {
-    public class StreamerDbContext : DbContext
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"");//TODO
-        }
-        public DbSet<Streamer> Streamers { get; set; }
-        public DbSet<Video> Videos { get; set; }
+        optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Streamer;Trusted_Connection=True;");
     }
+    public DbSet<Streamer> Streamers { get; set; }
+    public DbSet<Video> Videos { get; set; }
 }
