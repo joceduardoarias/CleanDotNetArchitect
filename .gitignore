@@ -1,7 +1,64 @@
+# User-specific files
 *.suo
 *.user
+*.userosscache
+*.sln.docstates
+*.ncb
+*.sdf
+*.opensdf
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+
+# Backup & Log files
+*.bak
+*.log
+
+# Local application configuration
+appsettings.local.json
+
+# Tooling
 _ReSharper.*
-bin
-obj
-packages
-.vs
+.idea/
+NCrunch*
+*.ncrunch*
+*.DotSettings
+
+# Office Temp Files
+~$*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
