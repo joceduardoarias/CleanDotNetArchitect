@@ -22,7 +22,7 @@ public class StreamerDbContext : DbContext
         modelBuilder.Entity<Streamer>()
             .HasMany(m => m.Videos)
             .WithOne(m => m.Streamer)
-            .HasForeignKey(m => m.StreamerId)
+            .HasForeignKey(m => m.StreamerId)  //Fluent API se utiliza cuadno los modelos no cuamplen las convenciones de EF para representar las relaciones.
             .IsRequired()
             .OnDelete(DeleteBehavior.Restrict);
 
