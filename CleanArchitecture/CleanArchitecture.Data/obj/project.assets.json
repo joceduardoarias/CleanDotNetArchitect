@@ -4037,9 +4037,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj",
-      "projectName": "CleanArchitecture.Data",
-      "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj",
+      "projectUniqueName": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Infrastructure.csproj",
+      "projectName": "CleanArchitecture.Infrastructure",
+      "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\02204\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Data\\obj\\",
       "projectStyle": "PackageReference",

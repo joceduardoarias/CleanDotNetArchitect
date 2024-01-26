@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OR4+VLMKr1RRSxC/rA8GA0xkn5H5vIPy8UTMQ/yLDNgrvRE2JnOVvA7MuVoWTQO6oktVe8YyKMZCLd/ozEwdVg==",
+  "dgSpecHash": "S7fD0EDUq0IJmHRX2VNDERTHd01r7OSZ2MuKc2XEF3E5o0NfFBX5ppwOZQams9xlq7RBHfwAWLzARYgNAzO0Sw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj",
+  "projectFilePath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\02204\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\02204\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
