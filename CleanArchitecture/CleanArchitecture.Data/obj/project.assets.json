@@ -1478,6 +1478,19 @@
           }
         }
       },
+      "CleanArchitecture.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CleanArchitecture.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CleanArchitecture.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CleanArchitecture.Application.dll": {}
+        }
+      },
       "CleanArchitecture.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4017,6 +4030,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "CleanArchitecture.Application/1.0.0": {
+      "type": "project",
+      "path": "../CleanArchitecture.Application/CleanArchitecture.Application.csproj",
+      "msbuildProject": "../CleanArchitecture.Application/CleanArchitecture.Application.csproj"
+    },
     "CleanArchitecture.Domain/1.0.0": {
       "type": "project",
       "path": "../CleanArchitect.Domain/CleanArchitecture.Domain.csproj",
@@ -4025,7 +4043,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "CleanArchitecture.Domain >= 1.0.0",
+      "CleanArchitecture.Application >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.1"
     ]
@@ -4062,8 +4080,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitect.Domain\\CleanArchitecture.Domain.csproj": {
-              "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitect.Domain\\CleanArchitecture.Domain.csproj"
+            "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
+              "projectPath": "C:\\Users\\02204\\Documents\\Proys\\CleanDotNetArchitect\\CleanArchitecture\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj"
             }
           }
         }
