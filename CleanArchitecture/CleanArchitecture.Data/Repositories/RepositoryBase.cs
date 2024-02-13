@@ -4,13 +4,13 @@ using CleanArchitecture.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace CleanArchitecture.Infrastructure.Repository;
+namespace CleanArchitecture.Infrastructure.Repositories;
 
-public class RespositoryBase<T> : IAsyncRepository<T> where T : BaseDomainModel
+public class RepositoryBase<T> : IAsyncRepository<T> where T : BaseDomainModel
 {
     protected readonly StreamerDbContext _context;
 
-    public RespositoryBase(StreamerDbContext context)
+    public RepositoryBase(StreamerDbContext context)
     {
         _context = context;
     }
