@@ -13,7 +13,7 @@ public static class InfrastructureServiceRegistration
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<StreamerDbContext>(options =>
-        options.UseSqlServer(configuration.GetConnectionString("ConectionString"))
+        options.UseSqlServer(configuration.GetConnectionString("ConnectionString"))
         );
 
         services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
