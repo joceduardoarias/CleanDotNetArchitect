@@ -5,5 +5,5 @@ namespace CleanArchitecture.Application.Contracts.Identity;
 public interface IAuthService
 {
     Task<AuthResponse> Login(AuthRequest request);
-    Task<AuthResponse> Register(RegistrationRequest request);
+    Task<RegistrationResponse> Register(RegistrationRequest request);
 }
