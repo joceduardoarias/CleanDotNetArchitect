@@ -1,5 +1,6 @@
 using CleanArchitecture.Infrastructure;
 using CleanArchitecture.Application;
+using CleanArchitecture.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 // Add Application services
 builder.Services.AddApplicationServices();
+// Add Identitty services
+builder.Services.AddIdentityServices(builder.Configuration);
+// Add cors police
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+});
 
 var app = builder.Build();
 

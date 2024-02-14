@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Identity;
 
-public class CleanArchitectureDbContext : IdentityDbContext<ApplicationUser>
+public class CleanArchitectureIdentityDbContext : IdentityDbContext<ApplicationUser>
 {
-    public CleanArchitectureDbContext(DbContextOptions<CleanArchitectureDbContext> options) : base(options)
+    public CleanArchitectureIdentityDbContext(DbContextOptions<CleanArchitectureIdentityDbContext> options) : base(options)
     {
     }
 
