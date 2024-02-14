@@ -25,7 +25,7 @@ public static class IdentityServiceRegistritation
         services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<CleanArchitectureIdentityDbContext>().AddDefaultTokenProviders();
 
-        services.AddIdentity<IAuthService, AuthService>();
+        services.AddScoped<IAuthService, AuthService>();
 
         services.AddAuthentication(options =>
         {
