@@ -16,7 +16,7 @@ public class VideoController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpGet("{username}", Name = "GetVideo")]
+    [HttpGet("{userName}", Name = "GetVideo")]
     [ProducesResponseType(typeof(IEnumerable<VideoVm>), (int)HttpStatusCode.OK)]
     public async Task<ActionResult<IEnumerable<VideoVm>>> GetVideoByUserName(string userName)
     {
