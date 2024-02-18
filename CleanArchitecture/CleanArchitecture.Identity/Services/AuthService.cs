@@ -33,7 +33,7 @@ public class AuthService : IAuthService
             throw new Exception($"El usuario con email {request.Email} no existe!");
         }
 
-        var result = await _signInManager.PasswordSignInAsync(request.Email, request.Password, false, lockoutOnFailure: false);
+        var result = await _signInManager.PasswordSignInAsync(user.UserName!, request.Password, false, lockoutOnFailure: false);
 
         if (!result.Succeeded)
         {
@@ -56,14 +56,14 @@ public class AuthService : IAuthService
     {
         var existingUser = await _userManager.FindByEmailAsync(request.Username);
 
-        if (existingUser == null)
+        if (existingUser != null)
         {
             throw new Exception($"El usuario ya fue tomado por otra cuenta");
         }
 
         var existingEmail = await _userManager.FindByEmailAsync(request.Email);
 
-        if (existingEmail == null)
+        if (existingEmail != null)
         {
             throw new Exception($"El email ya fue tomado por otra cuenta");
         }
@@ -73,6 +73,7 @@ public class AuthService : IAuthService
             Email = request.Email,
             Name = request.Name,
             LastName = request.LastName,
+            UserName = request.Username,
             EmailConfirmed = true
         };
 
@@ -80,7 +81,7 @@ public class AuthService : IAuthService
 
         if (result.Succeeded)
         {
-            await _userManager.AddToRoleAsync(user, "Operator");
+            await _userManager.AddToRoleAsync(user, "administrator");
             
             var token = await GenerateToken(user);
 
