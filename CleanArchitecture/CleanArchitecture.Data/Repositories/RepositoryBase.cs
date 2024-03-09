@@ -24,11 +24,21 @@ public class RepositoryBase<T> : IAsyncRepository<T> where T : BaseDomainModel
         return entity;
     }
 
+    public void AddEntity(T entity)
+    {
+        _context.Set<T>().Add(entity);
+    }
+
     public async Task DeleteAsync(T entity)
     {
         _context.Set<T>().Remove(entity);
 
         await _context.SaveChangesAsync();
+    }
+
+    public void DeleteEntity(T entity)
+    {
+        _context.Set<T>().Remove(entity);
     }
 
     public async Task<IReadOnlyList<T>> GetAllAsync()
@@ -80,8 +90,22 @@ public class RepositoryBase<T> : IAsyncRepository<T> where T : BaseDomainModel
 
     public async Task<T> UpdateAsync(T entity)
     {
+        _context.Set<T>().Attach(entity);
         _context.Entry(entity).State = EntityState.Modified;
         await _context.SaveChangesAsync();
         return entity;
     }
+    // Método para actualizar una entidad en la base de datos.
+    public void UpdateEntity(T entity)
+    {
+        // Asegura que la instancia de la entidad sea reconocida por el contexto de Entity Framework,
+        // pero sin cambiar su estado en el contexto si ya está siendo rastreada.
+        _context.Set<T>().Attach(entity);
+
+        // Marca el estado de la entidad específica como 'Modified'.
+        // Entity Framework ahora sabe que la entidad ha sido modificada y necesita ser actualizada
+        // en la base de datos cuando se llame a SaveChanges o SaveChangesAsync.
+        _context.Entry(entity).State = EntityState.Modified;
+    }
 }
+
