@@ -18,7 +18,7 @@ public static class InfrastructureServiceRegistration
 
         services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
         services.AddScoped<IVideoRepository, VideoRepository>();
-        services.AddScoped<IStreamRepository, StreamerRepository>();
+        services.AddScoped<IStreamerRepository, StreamerRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;

@@ -9,11 +9,11 @@ namespace CleanArchitecture.Application.Features.Streamers.Commands.UpdateStream
 
 public class UpdateStreamerCommandHandler : IRequestHandler<UpdateStreamerCommand,Unit>
 {
-    private readonly IStreamRepository _streamRepository;
+    private readonly IStreamerRepository _streamRepository;
     private readonly IMapper _mapper;
     private readonly ILogger<UpdateStreamerCommandHandler> _logger;
 
-    public UpdateStreamerCommandHandler(IStreamRepository streamRepository, IMapper mapper, ILogger<UpdateStreamerCommandHandler> logger)
+    public UpdateStreamerCommandHandler(IStreamerRepository streamRepository, IMapper mapper, ILogger<UpdateStreamerCommandHandler> logger)
     {
         _streamRepository = streamRepository;
         _mapper = mapper;

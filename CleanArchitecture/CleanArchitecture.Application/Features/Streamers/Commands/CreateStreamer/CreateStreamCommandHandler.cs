@@ -8,13 +8,15 @@ namespace CleanArchitecture.Application.Features.Streamers.Commands.CreateStream
 
 public class CreateStreamCommandHandler : IRequestHandler<CreateStreamerCommand, int>
 {
-    private readonly IStreamRepository _streamRepository;
+    //private readonly IStreamerRepository _streamRepository;
+    private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     private readonly ILogger<CreateStreamCommandHandler> _logger;
 
-    public CreateStreamCommandHandler(IStreamRepository streamRepository, IMapper mapper, ILogger<CreateStreamCommandHandler> logger)
+    public CreateStreamCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, ILogger<CreateStreamCommandHandler> logger)
     {
-        _streamRepository = streamRepository;
+        //_streamRepository = streamRepository;
+        _unitOfWork = unitOfWork;
         _mapper = mapper;
         _logger = logger;
     }
@@ -28,10 +30,19 @@ public class CreateStreamCommandHandler : IRequestHandler<CreateStreamerCommand,
             return 0;
         }
 
-        var newStreamer = await _streamRepository.AddAsync(streamerEntity);
+        //var newStreamer = await _streamRepository.AddAsync(streamerEntity);
+        
+        _unitOfWork.StreamerRepository.AddEntity(streamerEntity);
+        
+        var result = await _unitOfWork.Complete();
 
-        _logger.LogInformation($"Streamer {newStreamer.Id} fue creado exiosamente");
+        if (result <= 0)
+        {
+            throw new Exception($"No se pudo insertar el record de streamer");
+        }
 
-        return newStreamer.Id;
+        _logger.LogInformation($"Streamer {streamerEntity.Id} fue creado exiosamente");
+
+        return streamerEntity.Id;
     }
 }

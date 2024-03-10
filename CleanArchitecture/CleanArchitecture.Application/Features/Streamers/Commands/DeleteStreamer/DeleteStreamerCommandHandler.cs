@@ -10,11 +10,11 @@ namespace CleanArchitecture.Application.Features.Streamers.Commands.DeleteStream
 
 public class DeleteStreamerCommandHandler : IRequestHandler<DeleteStreamerCommand, Unit>
 {
-    private readonly IStreamRepository _streamRepository;
+    private readonly IStreamerRepository _streamRepository;
     private readonly IMapper _mapper;
     private readonly ILogger<DeleteStreamerCommandHandler> _logger;
 
-    public DeleteStreamerCommandHandler(IStreamRepository streamRepository, IMapper mapper, ILogger<DeleteStreamerCommandHandler> logger)
+    public DeleteStreamerCommandHandler(IStreamerRepository streamRepository, IMapper mapper, ILogger<DeleteStreamerCommandHandler> logger)
     {
         _streamRepository = streamRepository;
         _mapper = mapper;

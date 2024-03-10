@@ -2,6 +2,6 @@
 
 namespace CleanArchitecture.Application.Contracts.Persistence;
 
-public interface IStreamRepository : IAsyncRepository<Streamer>
+public interface IStreamerRepository : IAsyncRepository<Streamer>
 {
 }

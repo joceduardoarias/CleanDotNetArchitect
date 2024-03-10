@@ -12,7 +12,11 @@ public class UnitOfWork : IUnitOfWork
     private Hashtable _respositories;
     // Contexto de la base de datos, usado para realizar las operaciones de persistencia.
     private readonly StreamerDbContext _context;
+    private  IVideoRepository _videoRepository;
+    private  IStreamerRepository _streamerRepository;
 
+    public IVideoRepository VideoRepository => _videoRepository ??= new VideoRepository(_context);
+    public IStreamerRepository StreamerRepository => _streamerRepository ??= new StreamerRepository(_context);
     // Constructor que inyecta el contexto de la base de datos.
     public UnitOfWork(StreamerDbContext context)
     {
