@@ -35,7 +35,7 @@ public interface IAsyncRepository<T> where T : BaseDomainModel
         List<Expression<Func<T, object>>> includes = null,
         bool disableTracking = true);
     
-    Task<T> GetByIdAsync(int id);
+    Task<T?> GetByIdAsync(int id);
     Task<T> AddAsync(T entity);
     Task<T> UpdateAsync(T entity);
     Task DeleteAsync(T entity);
