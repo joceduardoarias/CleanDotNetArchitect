@@ -22,7 +22,8 @@ public class UnitOfWork : IUnitOfWork
     {
         _context = context;
     }
-
+    //Esta propiedad se agrega para obtener un referencia del contexto en el los TEST.
+    public StreamerDbContext StreamerDbContext => _context;
     // Método para completar y guardar los cambios realizados en la base de datos.
     public async Task<int> Complete()
     {
